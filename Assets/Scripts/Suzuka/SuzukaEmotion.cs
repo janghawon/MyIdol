@@ -10,7 +10,8 @@ public enum SuzukaState
     Surprise,
     Dance_1,
     Dance_2,
-    Dance_3
+    Dance_3,
+    None
 }
 
 public class SuzukaEmotion : MonoBehaviour
@@ -18,9 +19,10 @@ public class SuzukaEmotion : MonoBehaviour
     [SerializeField] private SuzukaState _suzukaState;
     [SerializeField] private UnityEvent<SuzukaState> _animationEvent;
 
-    public void SetEmotion(SuzukaState suzukaState)
+    public void SetEmotion(SuzukaState suzukaState, bool canLook)
     {
         _suzukaState = suzukaState;
         _animationEvent?.Invoke(_suzukaState);
+        gameObject.SetActive(canLook);
     }
 }
