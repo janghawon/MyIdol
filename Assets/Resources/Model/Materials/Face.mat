@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: outer
-  m_Shader: {fileID: 4800000, guid: df12117ecd77c31469c224178886498e, type: 3}
+  m_Name: Face
+  m_Shader: {fileID: 4800000, guid: efa77a80ca0344749b4f19fdd5891cbe, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -49,11 +49,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 2800000, guid: bccf54c8942031c4ea374e2cf77b6797, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9fd4e63084efac046b2c0333836361ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: bccf54c8942031c4ea374e2cf77b6797, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9fd4e63084efac046b2c0333836361ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Bump2ndMap:
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 1af08687933460748a7d92e7cd463c2d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -165,7 +165,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: bccf54c8942031c4ea374e2cf77b6797, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9fd4e63084efac046b2c0333836361ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MatCap2ndBlendMask:
@@ -201,7 +201,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 2800000, guid: bccf54c8942031c4ea374e2cf77b6797, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9fd4e63084efac046b2c0333836361ef, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineVectorTex:
@@ -209,7 +209,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineWidthMask:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: bd23b24f89fe8d544b35265bfee6436b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
@@ -431,7 +431,7 @@ Material:
     - _IDMaskIndex8: 0
     - _IgnoreEncryption: 0
     - _Invisible: 0
-    - _LightMaxLimit: 1.5
+    - _LightMaxLimit: 1.4
     - _LightMinLimit: 1
     - _Main2ndDissolveNoiseStrength: 0.1
     - _Main2ndEnableLighting: 1
@@ -562,29 +562,29 @@ Material:
     - _RimNormalStrength: 1
     - _RimShadowMask: 0
     - _RimVRParallaxStrength: 1
-    - _Shadow2ndBlur: 0.3
-    - _Shadow2ndBorder: 0.5
+    - _Shadow2ndBlur: 0
+    - _Shadow2ndBorder: 0
     - _Shadow2ndNormalStrength: 1
     - _Shadow2ndReceive: 0
     - _Shadow3rdBlur: 0.1
     - _Shadow3rdBorder: 0.25
     - _Shadow3rdNormalStrength: 1
     - _Shadow3rdReceive: 0
-    - _ShadowBlur: 0.1
+    - _ShadowBlur: 0.2
     - _ShadowBlurMaskLOD: 0
-    - _ShadowBorder: 0.1
+    - _ShadowBorder: 0.25
     - _ShadowBorderMaskLOD: 0
     - _ShadowBorderRange: 0
     - _ShadowColorType: 0
     - _ShadowEnvStrength: 0
     - _ShadowFlatBlur: 1
     - _ShadowFlatBorder: 1
-    - _ShadowMainStrength: 1
+    - _ShadowMainStrength: 0
     - _ShadowMaskType: 0
     - _ShadowNormalStrength: 1
     - _ShadowPostAO: 0
     - _ShadowReceive: 0
-    - _ShadowStrength: 1
+    - _ShadowStrength: 0.75
     - _ShadowStrengthMaskLOD: 0
     - _ShiftBackfaceUV: 0
     - _Smoothness: 1
@@ -632,7 +632,7 @@ Material:
     - _UseParallax: 0
     - _UseReflection: 0
     - _UseRim: 0
-    - _UseShadow: 0
+    - _UseShadow: 1
     - _VertexLightStrength: 0
     - _WorkflowMode: 1
     - _ZClip: 1
@@ -711,12 +711,12 @@ Material:
     - _ReflectionCubeColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimIndirColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Shadow2ndColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Shadow2ndColor: {r: 1, g: 0.95711833, b: 0.95283014, a: 0}
     - _Shadow3rdColor: {r: 0, g: 0, b: 0, a: 0}
     - _ShadowAOShift: {r: 1, g: 0, b: 1, a: 0}
     - _ShadowAOShift2: {r: 1, g: 0, b: 1, a: 0}
-    - _ShadowBorderColor: {r: 1, g: 0, b: 0, a: 1}
-    - _ShadowColor: {r: 0.7, g: 0.75, b: 0.85, a: 1}
+    - _ShadowBorderColor: {r: 0, g: 0, b: 0, a: 1}
+    - _ShadowColor: {r: 0.93333334, g: 0.7413907, b: 0.70980394, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _e2ga0: {r: 1, g: 0, b: 0, a: 0}
     - _e2ga1: {r: 1, g: 0, b: 0, a: 1}
@@ -751,7 +751,7 @@ Material:
     - _egc6: {r: 1, g: 1, b: 1, a: 0}
     - _egc7: {r: 1, g: 1, b: 1, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &6260585514790914372
+--- !u!114 &3384221662857928510
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
