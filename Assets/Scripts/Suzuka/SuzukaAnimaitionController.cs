@@ -15,8 +15,13 @@ public class SuzukaAnimaitionController : MonoBehaviour
         _controller = GetComponent<Animator>();
     }
 
-    public void SetEmotionAnimation(SuzukaState ss)
+    public void SetEmotionAnimation(SuzukaState ss, bool canLook)
     {
+        if(!canLook)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
         if (ss == SuzukaState.None)
         {
             _controller.SetBool(_emotionHash, false);
