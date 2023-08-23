@@ -585,25 +585,10 @@ MonoBehaviour:
   _SetEmotion:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 317166804}
-        m_TargetAssemblyTypeName: SuzukaAnimaitionController, Assembly-CSharp
-        m_MethodName: SetEmotionAnimation
+      - m_Target: {fileID: 222776163}
+        m_TargetAssemblyTypeName: SuzukaEmotion, Assembly-CSharp
+        m_MethodName: SetEmotion
         m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  _textSkipEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 608644666}
-        m_TargetAssemblyTypeName: DataSender, Assembly-CSharp
-        m_MethodName: NextDataSend
-        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

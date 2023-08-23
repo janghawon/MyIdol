@@ -5,18 +5,20 @@ using System.Text;
 using TMPro;
 using UnityEngine.Events;
 
+
 public class SyntexManager : MonoBehaviour
 {
+    private string _syntex;
     bool isTexting;
     [SerializeField] private TextMeshProUGUI _sysntexText;
     [SerializeField] private TextMeshProUGUI _nameText;
+    [NonSerialized] private GameObject _textPanel;
     private StringBuilder _sb;
     private bool _canLook;
     [SerializeField] private string[] _name = new string[2];
     SuzukaState _ss;
     [SerializeField] private UnityEvent<SuzukaState, bool> _SetEmotion = null;
     private Coroutine _textCo;
-    [SerializeField] private UnityEvent _textSkipEvent = null;
 
     private void Awake()
     {
@@ -27,7 +29,6 @@ public class SyntexManager : MonoBehaviour
     {
         _canLook = Convert.ToBoolean(canLookSuzuka);
         _ss = (SuzukaState)Enum.Parse(typeof(SuzukaState), state);
-        Debug.Log(_ss);
         SetLookInfo(name);
         _textCo = StartCoroutine(TextingSyntex(syntex));
     }
@@ -42,11 +43,12 @@ public class SyntexManager : MonoBehaviour
     {
         if(!isTexting)
         {
+            _syntex = syntext;
             isTexting = true;
             _sb = new StringBuilder();
-            for (int i = 0; i < syntext.Length; i++)
+            for (int i = 0; i < _syntex.Length; i++)
             {
-                _sb.Append(syntext[i]);
+                _sb.Append(_syntex[i]);
                 _sysntexText.text = _sb.ToString();
                 yield return new WaitForSeconds(0.05f);
             }
@@ -55,8 +57,8 @@ public class SyntexManager : MonoBehaviour
         else
         {
             StopCoroutine(_textCo);
+            _sysntexText.text = _syntex;
             isTexting = false;
-            _textSkipEvent?.Invoke();
         }
     }
 }

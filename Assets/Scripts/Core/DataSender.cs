@@ -34,6 +34,7 @@ public class DataSender : MonoBehaviour
 
     public void NextDataSend()
     {
+        if (!canPressPanel) return;
         _syntexManager.ChangeValue(Convert.ToInt32(Dialog_List_Arr[_phaseCount][_syntexCount]["Person"]),
                                    Convert.ToInt32(Dialog_List_Arr[_phaseCount][_syntexCount]["Name"]),
                                    Dialog_List_Arr[_phaseCount][_syntexCount]["Syntex"].ToString(),

@@ -23,6 +23,7 @@ public class SuzukaEmotion : MonoBehaviour
     {
         _suzukaState = suzukaState;
         _animationEvent?.Invoke(_suzukaState);
+        Debug.Log(canLook);
         gameObject.SetActive(canLook);
     }
 }
